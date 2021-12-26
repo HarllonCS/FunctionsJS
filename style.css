@@ -1,0 +1,71 @@
+body {
+    background-color: rgb(60, 157, 202);
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    text-align: center;
+    font-size: 16pt;
+    color: white;
+}
+
+section {
+    background-color: white;
+    width: 350px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 15pt;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.226);
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.res {
+    margin-bottom: 10px;
+}
+
+#iNum {
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    font-size: 12pt;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+#sel {
+    background-color: rgb(219, 219, 219);
+    border: 1px solid rgb(110, 110, 110);
+    color: rgb(66, 66, 66);
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: rgb(60, 157, 202);
+    border-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: rgba(60, 157, 202, 0.856);
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    color: white;
+    font-weight: bold;
+    font-size: 12pt;
+}
