@@ -15,23 +15,23 @@
 
     <section>
         <div class="form">
-            <label for="iNum">Valor: </label>
+            <label for="iNum">Número (entre 1 à 100): </label>
             <input type="number" id="iNum">
 
-            <input class="btn" type="button" value="ADICIONAR">
+            <input class="btn" type="button" value="ADICIONAR" onclick="adicionar()">
         </div>
 
         <div class="res">
-            <select id="sel">
-                <option>Insira os valores acima</option>
-            </select>
+            <select id="sel" size="10"></select>
 
-            <input class="btn" type="button" value="GERAR">
+            <input class="btn" type="button" value="MOSTRAR">
         </div>
     </section>
 
     <footer>
         <sup>&copy;</sup>HarllonCS
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

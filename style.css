@@ -13,8 +13,8 @@ header {
 
 section {
     background-color: white;
-    width: 350px;
     margin: auto;
+    width: 350px;
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -35,6 +35,7 @@ section {
     font-size: 12pt;
     padding: 4px;
     border-radius: 4px;
+    width: 223px;
 }
 
 #sel {
@@ -45,6 +46,7 @@ section {
     font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
+    width: 140px;
 }
 
 .btn {
