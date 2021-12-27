@@ -10,11 +10,11 @@ function adicionar() {
 
         let num = numero.value
 
-        if ((num >= 1 && num <= 100) && vetorNums.indexOf(num) == -1) {
+        if ((Number(num) >= 1 && Number(num) <= 100) && vetorNums.indexOf(Number(num)) == -1) {
 
             let opt = document.createElement('option')
             
-            vetorNums.push(num)
+            vetorNums.push(Number(num))
 
             ls.appendChild(opt)
             
@@ -37,24 +37,23 @@ function adicionar() {
 
 function mostrar() {
 
-    let maiorValor = vetorNums[0]
-    let menosValor = vetorNums[0]
-    
-    for (let pos in vetorNums) {
+    let soma = 0
+
+    for (let i in vetorNums) {
         
-        if (vetorNums[pos] > maiorValor) {
-            maiorValor = vetorNums[pos]
-        } else {
-            menosValor = vetorNums[pos]
-        }
+        soma += vetorNums[i]
+
+        vetorNums[i] > vetorNums[0] ? maiorValor = vetorNums[i] : menorValor = vetorNums[i]
     }
 
     if (vetorNums.length > 0) {
         res.appendChild(p)
         
-        p.innerHTML = `Total de valores: <span style='color: red;'>${vetorNums.length}<span>`
-        p.innerHTML += `<br>Maior Valor: ${maiorValor}`
-        p.innerHTML += `<br>Menor Valor: ${menosValor}`
+        p.innerHTML = `Total de valores: <span style='color:red;'>${vetorNums.length}</span>`
+        p.innerHTML += `<br>Maior Valor: <span style='color:red;'>${maiorValor}</span>`
+        p.innerHTML += `<br>Menor Valor: <span style='color:red;'>${menorValor}</span>`
+        p.innerHTML += `<br>Soma dos valores: <span style='color:red;'>${soma}</span>`
+        p.innerHTML += `<br>Média dos valores: <span style='color:red;'>${soma/vetorNums.length}</span>`
 
     } else {
         alert('Adicione os valores antes de clicar nesse botão.')
