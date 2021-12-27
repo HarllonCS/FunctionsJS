@@ -2,6 +2,7 @@ let num = document.querySelector('#iNum').value
 let sel = document.querySelector('#sel')
 let vetorNums = []
 
+/*
 function isNumero(n) {
     if (Number(n) >= 1 && Number(n) <= 100) {
         return true
@@ -17,9 +18,10 @@ function inLista(n, l) {
         return false
     }
 }
+*/
 
 function adicionar() {
-    if (isNumero(num) && !inLista(num, vetorNums)) {
+    if ((Number(num) >= 1 && Number(num) <= 100) && vetorNums.indexOf(num) != -1) {
         
         alert('Tudo ok!')
     } else {
