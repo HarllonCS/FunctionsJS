@@ -1,18 +1,17 @@
-var num = document.querySelector('#iNum').value
-var res = document.querySelector('.res')
-var sel = document.querySelector('#sel')
-var vetorNums = []
+let num = document.querySelector('#iNum').value
+let sel = document.querySelector('#sel')
+let vetorNums = []
 
-function isNumero(x) {
-    if (Number(x) >= 1 && Number(x) <= 100) {
+function isNumero(n) {
+    if (Number(n) >= 1 && Number(n) <= 100) {
         return true
     } else {
         return false
     }
 }
 
-function inSel(x, lista) {
-    if (lista.indexOf(Number(x)) != -1) {
+function inLista(n, l) {
+    if (l.indexOf(Number(n)) != -1) {
         return true
     } else {
         return false
@@ -20,15 +19,11 @@ function inSel(x, lista) {
 }
 
 function adicionar() {
-    
-    if (isNumero(num) && !inSel(num, vetorNums)) {
-
-        alert('Tudo ok, patrão! Arrocha.')
-    
-    } else if (!isNumero(num)) {
+    if (isNumero(num) && !inLista(num, vetorNums)) {
         
-        alert(`${num} não é número.`)
+        alert('Tudo ok!')
     } else {
-        alert(`${num} já tá na lista.`)
+        
+        alert('ERRO')
     }
 }
