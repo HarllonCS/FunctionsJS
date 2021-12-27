@@ -8,13 +8,13 @@ vetorNums = []
 function adicionar() {
     if (numero.value.length > 0) {
 
-        let num = numero.value
+        let num = Number(numero.value)
 
-        if ((Number(num) >= 1 && Number(num) <= 100) && vetorNums.indexOf(Number(num)) == -1) {
+        if ((num >= 1 && num <= 100) && vetorNums.indexOf(num) == -1) {
 
             let opt = document.createElement('option')
             
-            vetorNums.push(Number(num))
+            vetorNums.push(num)
 
             ls.appendChild(opt)
             
