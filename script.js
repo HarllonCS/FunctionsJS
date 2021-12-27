@@ -1,27 +1,32 @@
-num = document.querySelector('#iNum')
-sel = document.querySelector('#sel')
+numero = document.querySelector('#iNum')
+res = document.querySelector('.res')
+lista = document.querySelector('#sel')
 vetorNums = []
 
 function adicionar() {
+    if (numero.value.length > 0) {
 
-    let n = num.value
+        let num = Number(numero.value)
 
-    if (n.length > 0) {
-
-        if ((n >= 1 && n <= 100) && vetorNums.indexOf(n) == -1) {
-
-            vetorNums.push(n)
+        if ((num >= 1 && num <= 100) && vetorNums.indexOf(num) == -1) {
 
             opt = document.createElement('option')
-            sel.appendChild(opt)
-            opt.text = `Adicionado: ${n}`
+            lista.appendChild(opt)
+            
+            vetorNums.push(num)
+            
+            opt.text = `Adicionado: ${num}`
 
-        } else if (n < 1 || n > 100) {
+        } else if (num < 1 || num > 100) {
             alert('O número tem que ser entre 1 à 100.')
         } else {
-            alert('Já está na lista')
+            alert(`Número "${num}" já está na lista`)
         }
     } else {
-        alert('ERRO')
+        alert('Insira um número.')
     }
+}
+
+function mostrar(vetorNums) {
+    
 }
